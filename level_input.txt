@@ -1,27 +1,36 @@
-name: "Example Level"
-desc: "An AI-Generated Level"
-author: "YourName"
-version: "1"
-song: "000000"
-bg: "#1a1a1a"
-gnd: "#333333"
-length: "1500"
-difficulty: "3"
-secretCoins: "0"
-featured: "0"
-official: "0"
-creatorID: "0"
-songVolume: "100"
-reserved: "0"
+TITLE: Cave of Dread
+DIFFICULTY: Medium Demon
+LENGTH: Long
+SONG_ID: 763248
 
-level = [
-    [id: 1, col: 1, pos: 0,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 100,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 200,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 300,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 400,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 500,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 600,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 700,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
-    [id: 1, col: 1, pos: 800,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0]
-]
+DESCRIPTION:
+This level is set in a dark, crumbling cave filled with glowing crystals, ancient ruins, and danger at every turn. The player must traverse through all gameplay modes — cube, ship, ball, UFO, wave, robot, and spider — with lots of spammy, fast-paced sections. A large cave monster follows the player from the background, gradually getting closer, while other smaller monsters shoot fireballs toward the player using move + rotate triggers.
+
+STRUCTURE:
+- 0s–10s: Cube mode — spikes and fake blocks, subtle monster shadow appears behind
+- 10s–20s: Ship — narrow cave tunnels with saws swinging
+- 20s–30s: Ball — anti-gravity crystal field, tight spam clicks
+- 30s–40s: Wave — jagged cave walls and sharp crystal spikes
+- 40s–50s: UFO — floating platforms, monster arms reach across screen
+- 50s–60s: Robot — precision jumps on cracked stones
+- 60s–70s: Spider — teleport portals, rapid-fire clicks
+- 70s–80s: Dual — wave + cube, cave collapse animations
+- 80s–End: Final cube escape — monster charges, fireballs fly, cave collapses
+
+VISUALS:
+- Background: Dark grey/blue cave texture
+- Ground: Cracked stone with red crystal highlights
+- Colors: Red, black, violet, and electric blue
+- Monster: Black silhouette with red glowing eyes, appears from right and moves toward player using move triggers
+- Fireballs: Red-orange glowing orbs with rotate/move loop, triggered by monsters off-screen
+
+OBJECTS:
+- Move Trigger: Monster movement and fireball launching
+- Pulse Trigger: Every fireball impact causes screen shake
+- Animate Trigger: Monster growl and blinking eyes
+- Spawn Trigger: Used for sequenced monster attacks
+
+NOTES:
+- Add custom object groups for "Monster", "Fireball", and "Cave Debris"
+- Make heavy use of invisible blocks to control fireball paths
+- Use camera shake for fireball impact moments
